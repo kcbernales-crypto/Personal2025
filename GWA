@@ -1,0 +1,35 @@
+#include<iostream>
+using namespace std;
+
+int main() {
+    
+    float P1, P2, P3, P4, AVG, sum;
+    
+    cout<<"Preliminary Exams results: ";
+    cin >> P1;
+    
+    cout<<"Midterm Exams results: ";
+    cin >> P2;
+    
+    cout<<"Pre-Final Exams results: ";
+    cin >> P3;
+    
+    cout<<"Final Exams results: ";
+    cin >> P4;
+    
+    sum = P1 + P2 + P3 + P4;//Add 4 results
+    
+    AVG = sum / 4;
+    
+    cout << "The student has a GWA of " << AVG << endl;
+    
+    cout << endl;
+    
+    cout << "The student has ";
+    
+    if(AVG >= 75){
+        cout <<"Passed.";
+    }
+    else{
+        cout <<"Failed.";
+    }
