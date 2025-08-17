@@ -1,0 +1,33 @@
+#include<iostream>
+using namespace std;
+
+int main() {
+    
+    int num1, num2, num3, num4, num5, sum, quotient;
+    
+    cout <<"Enter number: ";
+    cin >> num1;//Get values for num1
+    
+    cout <<"Enter second number: ";
+    cin >> num2;//Get values for num2
+    
+    cout <<"Enter third number: ";
+    cin >> num3;//Get values for num3
+    
+    cout <<"Enter next number: ";
+    cin >> num4;//Get values for num4
+    
+    cout <<"Enter last number: ";
+    cin >> num5;//Get values for num5
+    
+    sum = num1 + num2 + num3 + num4 + num5;
+    
+    cout <<"The sum of the 5 numbers: " << sum << endl;
+    
+    quotient = sum / 5;
+    
+    cout<<"The average of these numbers is: "<<quotient;
+    
+    return 0;
+    
+}
