@@ -1,0 +1,23 @@
+#include<iostream>
+using namespace std;
+
+int main() {
+    
+    int num1, num2;
+    string operation_used;
+    
+    cout <<"Enter operation: ";
+    cin >> operation_used;
+    
+    cout << operation_used << endl;
+    
+    cout <<"Enter a number: ";
+    cin >> num1;
+    
+    cout <<"Enter another number: ";
+    cin >> num2;
+    
+
+    cout << num1 << " " << operation_used << " " << num2;
+
+}
