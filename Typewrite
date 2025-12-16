@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+const int ROW = 5;
+const int COLUMN = 5;
+
+int main() {
+    // initialize a variable with 0. 
+    int value = 1; 
+
+    for(int r = 0; r < ROW; r++) {
+        for(int c = 0; c < COLUMN; c++) {
+            // for each cell, the value will be displayed, then 1 will be incremented
+            cout << value << " ";
+            value++;
+        } 
+        // display newline to the end of each row
+        cout << endl;
+    }
+}
