@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+/*------ 
+Write a program that asks the user for a number n, then uses a while loop to print the square of all numbers from 1 to n. 
+Sample Input: 
+Enter n: 5 
+Sample Output: 
+1 4 9 16 25 
+-------*/
+
+
+int main () {
+    int n;
+    int s = 1;
+    
+    cout << "Enter n: ";
+    cin >> n;
+    
+    do {
+        cout << s * s << " ";
+        s++;
+    }
+    
+    while (s <= n);
+}
