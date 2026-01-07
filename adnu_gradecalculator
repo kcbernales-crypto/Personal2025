@@ -1,0 +1,68 @@
+#include <iostream>
+using namespace std;
+
+
+float ngrade (int x, float y) {
+    float pv = 0;
+
+    if (x <= 100 && x >= 98) 
+        pv += 4.00;
+    else if (x <= 97 && x >= 94)
+        pv += 3.50;
+    else if (x <= 93 && x >= 90)
+        pv += 3.00;
+    else if (x <= 89 && x >= 86)
+        pv += 2.50;
+    else if (x <= 85 && x >= 82)
+        pv += 2.00;
+    else if (x <= 81 && x >= 78)
+        pv += 1.50;
+    else if (x <= 77 && x >= 75)
+        pv += 1.00;
+    else 
+        pv += 0;
+
+    float unitxpv = y * pv;
+
+    return unitxpv;
+}
+
+int main () {
+    int no_of_sub, grade;
+    float unit, total_units, qpi;
+    float ag = 0;
+    char again = true;
+
+    cout << "Another end of semester, student! Compute your grade with us. We're going to follow the 2018 grading curriculum so be ready.\n";
+
+    do {
+    cout << "\nReminder: If you don't have a grade in a subject yet, input 0.\n" << endl;
+    cout << "No. of subject: ";
+    cin >> no_of_sub;
+
+    for (int i = 1; i <= no_of_sub; i++) {
+    cout << "Subject no." << i << " : ";
+    cin >> grade;
+    cout << "Unit: ";
+    cin >> unit;
+    ag += ngrade(grade, unit); 
+    cout << endl;
+    }
+    
+    cout << "AG: " << ag << endl;
+
+    cout << "How many units do you have for the entire semester? ";
+    cin >> total_units;
+
+    qpi = ag / total_units;
+
+    cout << "Your semestral QPI is: " << qpi << endl;
+    
+    cout << "\nDo you want to compute again (y/n)? ";
+    cin >> again;
+    }
+    
+    while (again == 'y');
+    cout << "Remember, this is just an estimated qpi.";
+
+    }
